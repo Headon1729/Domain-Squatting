@@ -1,0 +1,12 @@
+geoip2==4.2.0
+
+
+
+python_geoip==1.2
+
+geoip==1.3.2
+
+python-geoip-geolite2==2015.303
+maxminddb-geolite2==2018.703
+idna==2.8
+requests==2.25.1
