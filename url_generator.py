@@ -19,15 +19,16 @@ def extract_name(url):
 
 
 def addition(url):
-    # url_dict = extract_name(url)
-    # header =
-    # url = url_dict["subdomain"]
+    url_dict = extract_name(url)
+    scheme = url_dict["scheme"]
+    top_level_domain = url_dict["top_level_domain"]
+    url = url_dict["subdomain"]
     try:
         file_ptr = open("url_to_check.json", 'w')
         print("[", file=file_ptr)
         for i in string.ascii_lowercase:
             dict = {
-                "url": f"{url+i}",
+                "url": f"{scheme + url+i + top_level_domain}",
                 "method": "addition"
             }
             dict_json = json.dumps(dict, indent=4)
@@ -71,6 +72,10 @@ def mapping():
 
 def substitution(url, pos):
     list = []
+    url_dict = extract_name(url)
+    scheme = url_dict["scheme"]
+    top_level_domain = url_dict["top_level_domain"]
+    url = url_dict["subdomain"]
     if pos >= len(url)-1:
         return list
 
@@ -80,20 +85,33 @@ def substitution(url, pos):
         list.append(new_url1)
         new_url2 = url[:pos] + dict[url[pos]][1] + url[pos+1:]
         list.append(new_url2)
-        print("pos ", pos)
-        print("filled ", new_url1)
-        print("filled ", new_url2)
         # list += substitution(url, pos+1)
+    try:
+        file_ptr = open("url_to_check.json", 'a')
+        for i in list:
+            dict = {
+                "url": f"{scheme + i + top_level_domain}",
+                "method": "substitution"
+            }
+            dict_json = json.dumps(dict, indent=4)
+            print(dict_json+',', file=file_ptr)
+    finally:
+        file_ptr.close()
+
     return list
 
 
 def omission(url):
+    url_dict = extract_name(url)
+    scheme = url_dict["scheme"]
+    top_level_domain = url_dict["top_level_domain"]
+    url = url_dict["subdomain"]
     try:
         file_ptr = open("url_to_check.json", 'a')
         for i in range(len(url)):
             s = url[:i] + url[i+1:]
             dict = {
-                "url": f"{s}",
+                "url": f"{scheme + s + top_level_domain}",
                 "method": "omission"
             }
             dict_json = json.dumps(dict, indent=4)
@@ -103,16 +121,23 @@ def omission(url):
 
 
 def sub_domain(url):
+    url_dict = extract_name(url)
+    scheme = url_dict["scheme"]
+    top_level_domain = url_dict["top_level_domain"]
+    url = url_dict["subdomain"]
     try:
         file_ptr = open("url_to_check.json", 'a')
         for i in range(len(url)):
             s = url[:i+1] + "." + url[i+1:]
             dict = {
-                "url": f"{s}",
+                "url": f"{scheme + s + top_level_domain}",
                 "method": "subdomain"
             }
             dict_json = json.dumps(dict, indent=4)
-            print(dict_json+',', file=file_ptr)
+            if i != len(url)-1:
+                print(dict_json+',', file=file_ptr)
+            else:
+                print(dict_json, file=file_ptr)
         print("]", file=file_ptr)
     finally:
         file_ptr.close()
@@ -168,14 +193,10 @@ def computing_similarity(url):
         print(url, " does not exist")
 
 
-# url = extract_name("www.google.co.in")
-# addition("google")
-# omission("google")
-# sub_domain("google")
-# addition("www.google.com")
-# omission("www.google.com")
-# sub_domain("www.google.com")
+addition("https://www.google.com")
+omission("https://www.google.com")
+substitution("www.google.com", 0)
+sub_domain("https://www.google.com")
+
 # running()
 # computing_similarity("https://www.google.com")
-# print(len(substitution("abc", 0)))
-print(substitution("abc", 0))

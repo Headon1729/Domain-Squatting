@@ -1,14 +1,202 @@
 [
-    {
-        "url": "https://www.googlea.com",
-        "method": "addition"
-    },
-    {
-        "url": "https://www.youtubea.com",
-        "method": "addition"
-    },
-    {
-        "url": "https://www.googlea.com",
-        "method": "addition"
-    }
+{
+    "url": "https://www.googlea.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleb.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlec.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googled.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlee.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlef.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleg.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleh.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlei.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlej.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlek.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlel.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlem.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlen.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleo.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlep.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleq.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googler.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googles.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlet.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googleu.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlev.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlew.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlex.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googley.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.googlez.com",
+    "method": "addition"
+},
+{
+    "url": "https://www.oogle.com",
+    "method": "omission"
+},
+{
+    "url": "https://www.gogle.com",
+    "method": "omission"
+},
+{
+    "url": "https://www.gogle.com",
+    "method": "omission"
+},
+{
+    "url": "https://www.goole.com",
+    "method": "omission"
+},
+{
+    "url": "https://www.googe.com",
+    "method": "omission"
+},
+{
+    "url": "https://www.googl.com",
+    "method": "omission"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.foogle.com",
+    "method": "substitution"
+},
+{
+    "url": "www.hoogle.com",
+    "method": "substitution"
+},
+{
+    "url": "https://www.g.oogle.com",
+    "method": "subdomain"
+},
+{
+    "url": "https://www.go.ogle.com",
+    "method": "subdomain"
+},
+{
+    "url": "https://www.goo.gle.com",
+    "method": "subdomain"
+},
+{
+    "url": "https://www.goog.le.com",
+    "method": "subdomain"
+},
+{
+    "url": "https://www.googl.e.com",
+    "method": "subdomain"
+},
+{
+    "url": "https://www.google..com",
+    "method": "subdomain"
+}
 ]
